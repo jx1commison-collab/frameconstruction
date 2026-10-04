@@ -1056,8 +1056,9 @@
   },
   {
    "fieldname": "litigation_agent",
-   "fieldtype": "Data",
-   "label": "\u8bc9\u8bbc\u4ee3\u7406\u4eba"
+   "fieldtype": "Link",
+   "label": "\u8bc9\u8bbc\u4ee3\u7406\u4eba",
+   "options": "User"
   },
   {
    "fieldname": "litigation_case_status",
@@ -1072,8 +1073,9 @@
   },
   {
    "fieldname": "foreign_flow_officer",
-   "fieldtype": "Data",
-   "label": "\u6d89\u5916\u6d41\u7a0b\u5458"
+   "fieldtype": "Link",
+   "label": "\u6d89\u5916\u6d41\u7a0b\u5458",
+   "options": "User"
   },
   {
    "fieldname": "foreign_case_type",
@@ -1219,7 +1221,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-10-04 22:24:43.639024",
+ "modified": "2026-10-04 22:34:13.140272",
  "modified_by": "Administrator",
  "module": "ZAP Patent",
  "name": "Patent Case",
