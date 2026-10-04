@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-10-04 22:24:42.978253",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "year",
+  "due_date",
+  "amount",
+  "paid",
+  "paid_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "year",
+   "fieldtype": "Int",
+   "label": "\u5e74\u5ea6"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "\u5e74\u8d39\u7edd\u9650\u65e5"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "\u5e74\u8d39\u91d1\u989d"
+  },
+  {
+   "default": "0",
+   "fieldname": "paid",
+   "fieldtype": "Check",
+   "label": "\u662f\u5426\u7f34\u7eb3"
+  },
+  {
+   "fieldname": "paid_date",
+   "fieldtype": "Date",
+   "label": "\u7f34\u7eb3\u65e5\u671f"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-04 22:24:42.978253",
+ "modified_by": "Administrator",
+ "module": "ZAP Patent",
+ "name": "Patent Case Annuity",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
