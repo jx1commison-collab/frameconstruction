@@ -1,0 +1,602 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "field:application_no",
+ "creation": "2026-10-04 16:47:14.541274",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_basic_info",
+  "application_no",
+  "patent_title",
+  "internal_no",
+  "patent_type",
+  "customer",
+  "first_applicant",
+  "first_inventor",
+  "application_date",
+  "agency",
+  "case_source",
+  "section_status",
+  "internal_status",
+  "official_status",
+  "legal_status",
+  "is_valid",
+  "section_personnel",
+  "case_owner",
+  "drafting_agent",
+  "process_officer",
+  "qc_reviewer",
+  "business_consultant",
+  "section_new_application",
+  "new_case_filed",
+  "new_case_filing_date",
+  "contract_filing_deadline",
+  "section_substantive_exam",
+  "substantive_exam_deadline",
+  "substantive_exam_requested",
+  "substantive_exam_fee_paid",
+  "section_oa",
+  "oa1_issue_date",
+  "oa1_deadline",
+  "oan_issue_date",
+  "oan_deadline",
+  "oa_response_filed",
+  "oa_status",
+  "section_correction",
+  "correction_issue_date",
+  "correction_deadline",
+  "correction_filed",
+  "section_reexam",
+  "reexam_notice_type",
+  "reexam_response_deadline",
+  "reexam_case_status",
+  "section_invalidation",
+  "invalidation_deadline",
+  "invalidation_case_status",
+  "section_litigation",
+  "litigation_notice_type",
+  "court_hearing_date",
+  "litigation_case_status",
+  "section_grant_annuity",
+  "is_granted",
+  "grant_year",
+  "grant_announcement_date",
+  "last_annuity_reminder_date",
+  "certificate_received",
+  "customer_received_certificate",
+  "section_foreign_pct",
+  "foreign_case_type",
+  "national_phase_country",
+  "national_phase_deadline",
+  "foreign_agent_case_no",
+  "international_application_no",
+  "international_application_date",
+  "section_fee_reduction",
+  "fee_reduction_applied",
+  "fee_reduction_ratio",
+  "fee_reduction_record_no",
+  "official_fee_paid_by_us",
+  "section_commission",
+  "commission_coefficient",
+  "drafting_commission_rate",
+  "oa_commission_rate",
+  "grant_commission_rate",
+  "risk_commission_rate",
+  "actual_commission",
+  "section_divisional",
+  "is_divisional",
+  "parent_case",
+  "section_remarks",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_basic_info",
+   "fieldtype": "Section Break",
+   "label": "\u57fa\u672c\u4fe1\u606f"
+  },
+  {
+   "fieldname": "application_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "\u7533\u8bf7\u53f7",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "patent_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "\u4e13\u5229\u540d\u79f0",
+   "reqd": 1
+  },
+  {
+   "fieldname": "internal_no",
+   "fieldtype": "Data",
+   "label": "\u5185\u90e8\u7f16\u53f7"
+  },
+  {
+   "fieldname": "patent_type",
+   "fieldtype": "Select",
+   "label": "\u4e13\u5229\u7c7b\u578b",
+   "options": "\u53d1\u660e\n\u5b9e\u7528\u65b0\u578b\n\u5916\u89c2\u8bbe\u8ba1\nPCT\n\u5176\u4ed6"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "\u5ba2\u6237",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "first_applicant",
+   "fieldtype": "Data",
+   "label": "\u7b2c\u4e00\u7533\u8bf7\u4eba"
+  },
+  {
+   "fieldname": "first_inventor",
+   "fieldtype": "Data",
+   "label": "\u7b2c\u4e00\u53d1\u660e\u4eba"
+  },
+  {
+   "fieldname": "application_date",
+   "fieldtype": "Date",
+   "label": "\u7533\u8bf7\u65e5"
+  },
+  {
+   "fieldname": "agency",
+   "fieldtype": "Data",
+   "label": "\u4ee3\u7406\u673a\u6784"
+  },
+  {
+   "fieldname": "case_source",
+   "fieldtype": "Data",
+   "label": "\u6848\u6e90\u4eba"
+  },
+  {
+   "fieldname": "section_status",
+   "fieldtype": "Section Break",
+   "label": "\u72b6\u6001"
+  },
+  {
+   "fieldname": "internal_status",
+   "fieldtype": "Select",
+   "label": "\u5185\u90e8\u6848\u4ef6\u72b6\u6001",
+   "options": "\u65b0\u7533\u8bf7\n\u5df2\u9012\u4ea4"
+  },
+  {
+   "fieldname": "official_status",
+   "fieldtype": "Select",
+   "label": "\u5b98\u65b9\u6848\u4ef6\u72b6\u6001",
+   "options": "\u672a\u7f34\u5e74\u8d39\n\u7ec8\u6b62\n\u5931\u6548"
+  },
+  {
+   "fieldname": "legal_status",
+   "fieldtype": "Data",
+   "label": "\u6cd5\u5f8b\u72b6\u6001"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_valid",
+   "fieldtype": "Check",
+   "label": "\u662f\u5426\u6709\u6548"
+  },
+  {
+   "fieldname": "section_personnel",
+   "fieldtype": "Section Break",
+   "label": "\u4eba\u5458"
+  },
+  {
+   "fieldname": "case_owner",
+   "fieldtype": "Link",
+   "label": "\u8d1f\u8d23\u4eba",
+   "options": "User"
+  },
+  {
+   "fieldname": "drafting_agent",
+   "fieldtype": "Link",
+   "label": "\u64b0\u5199\u4ee3\u7406\u4eba",
+   "options": "User"
+  },
+  {
+   "fieldname": "process_officer",
+   "fieldtype": "Link",
+   "label": "\u6d41\u7a0b\u5458",
+   "options": "User"
+  },
+  {
+   "fieldname": "qc_reviewer",
+   "fieldtype": "Link",
+   "label": "\u8d28\u68c0\u4eba",
+   "options": "User"
+  },
+  {
+   "fieldname": "business_consultant",
+   "fieldtype": "Link",
+   "label": "\u5546\u52a1\u987e\u95ee",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_new_application",
+   "fieldtype": "Section Break",
+   "label": "\u65b0\u7533\u8bf7"
+  },
+  {
+   "default": "0",
+   "fieldname": "new_case_filed",
+   "fieldtype": "Check",
+   "label": "\u65b0\u6848\u662f\u5426\u5df2\u9012\u4ea4"
+  },
+  {
+   "fieldname": "new_case_filing_date",
+   "fieldtype": "Date",
+   "label": "\u7533\u8bf7\u65b0\u6848\u9012\u4ea4\u65e5\u671f"
+  },
+  {
+   "fieldname": "contract_filing_deadline",
+   "fieldtype": "Date",
+   "label": "\u5408\u540c\u7ea6\u5b9a\u9012\u4ea4\u65e5\u671f"
+  },
+  {
+   "fieldname": "section_substantive_exam",
+   "fieldtype": "Section Break",
+   "label": "\u5b9e\u5ba1"
+  },
+  {
+   "fieldname": "substantive_exam_deadline",
+   "fieldtype": "Date",
+   "label": "\u5b9e\u8d28\u5ba1\u67e5\u5c4a\u6ee1\u65e5"
+  },
+  {
+   "default": "0",
+   "fieldname": "substantive_exam_requested",
+   "fieldtype": "Check",
+   "label": "\u662f\u5426\u63d0\u5b9e\u5ba1"
+  },
+  {
+   "default": "0",
+   "fieldname": "substantive_exam_fee_paid",
+   "fieldtype": "Check",
+   "label": "\u5b9e\u5ba1\u8d39\u662f\u5426\u7f34\u7eb3"
+  },
+  {
+   "fieldname": "section_oa",
+   "fieldtype": "Section Break",
+   "label": "OA\u5ba1\u67e5\u610f\u89c1"
+  },
+  {
+   "fieldname": "oa1_issue_date",
+   "fieldtype": "Date",
+   "label": "\u4e00\u901a\u53d1\u6587\u65e5"
+  },
+  {
+   "fieldname": "oa1_deadline",
+   "fieldtype": "Date",
+   "label": "\u4e00\u901a\u7edd\u9650\u65e5"
+  },
+  {
+   "fieldname": "oan_issue_date",
+   "fieldtype": "Date",
+   "label": "N\u901a\u53d1\u6587\u65e5"
+  },
+  {
+   "fieldname": "oan_deadline",
+   "fieldtype": "Date",
+   "label": "N\u901a\u7edd\u9650\u65e5"
+  },
+  {
+   "default": "0",
+   "fieldname": "oa_response_filed",
+   "fieldtype": "Check",
+   "label": "OA\u662f\u5426\u5df2\u9012\u4ea4"
+  },
+  {
+   "fieldname": "oa_status",
+   "fieldtype": "Select",
+   "label": "OA\u6848\u4ef6\u72b6\u6001",
+   "options": "\u5f85\u5904\u7406\n\u5df2\u5904\u7406"
+  },
+  {
+   "fieldname": "section_correction",
+   "fieldtype": "Section Break",
+   "label": "\u8865\u6b63"
+  },
+  {
+   "fieldname": "correction_issue_date",
+   "fieldtype": "Date",
+   "label": "\u8865\u6b63\u53d1\u6587\u65e5"
+  },
+  {
+   "fieldname": "correction_deadline",
+   "fieldtype": "Date",
+   "label": "\u8865\u6b63\u7edd\u9650\u65e5"
+  },
+  {
+   "default": "0",
+   "fieldname": "correction_filed",
+   "fieldtype": "Check",
+   "label": "\u8865\u6b63\u662f\u5426\u5df2\u9012\u4ea4"
+  },
+  {
+   "fieldname": "section_reexam",
+   "fieldtype": "Section Break",
+   "label": "\u590d\u5ba1"
+  },
+  {
+   "fieldname": "reexam_notice_type",
+   "fieldtype": "Select",
+   "label": "\u590d\u5ba1\u901a\u77e5\u4e66\u540d\u79f0",
+   "options": "\u9a73\u56de\u51b3\u5b9a\n\u590d\u5ba1\u901a\u77e5\u4e66\n\u65e0\u6548\u901a\u77e5\u4e66"
+  },
+  {
+   "fieldname": "reexam_response_deadline",
+   "fieldtype": "Date",
+   "label": "\u590d\u5ba1\u7b54\u590d\u7edd\u9650\u65e5"
+  },
+  {
+   "fieldname": "reexam_case_status",
+   "fieldtype": "Data",
+   "label": "\u590d\u5ba1\u6848\u4ef6\u72b6\u6001"
+  },
+  {
+   "fieldname": "section_invalidation",
+   "fieldtype": "Section Break",
+   "label": "\u65e0\u6548"
+  },
+  {
+   "fieldname": "invalidation_deadline",
+   "fieldtype": "Date",
+   "label": "\u65e0\u6548\u5ba3\u544a\u7edd\u9650\u65e5"
+  },
+  {
+   "fieldname": "invalidation_case_status",
+   "fieldtype": "Data",
+   "label": "\u65e0\u6548\u6848\u4ef6\u72b6\u6001"
+  },
+  {
+   "fieldname": "section_litigation",
+   "fieldtype": "Section Break",
+   "label": "\u8bc9\u8bbc"
+  },
+  {
+   "fieldname": "litigation_notice_type",
+   "fieldtype": "Select",
+   "label": "\u8bc9\u8bbc\u901a\u77e5\u4e66\u540d\u79f0",
+   "options": "\u4e13\u5229\u884c\u653f\u8bc9\u8bbc\u4e00\u5ba1\u901a\u77e5\u4e66\n\u4e13\u5229\u884c\u653f\u8bc9\u8bbc\u4e8c\u5ba1\u901a\u77e5\u4e66\n\u4e13\u5229\u4fb5\u6743\u8bc9\u8bbc\u4e00\u5ba1\u901a\u77e5\u4e66"
+  },
+  {
+   "fieldname": "court_hearing_date",
+   "fieldtype": "Date",
+   "label": "\u5f00\u5ead\u65e5"
+  },
+  {
+   "fieldname": "litigation_case_status",
+   "fieldtype": "Data",
+   "label": "\u8bc9\u8bbc\u6848\u4ef6\u72b6\u6001"
+  },
+  {
+   "fieldname": "section_grant_annuity",
+   "fieldtype": "Section Break",
+   "label": "\u6388\u6743\u4e0e\u5e74\u8d39"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_granted",
+   "fieldtype": "Check",
+   "label": "\u662f\u5426\u6388\u6743"
+  },
+  {
+   "fieldname": "grant_year",
+   "fieldtype": "Data",
+   "label": "\u6388\u6743\u5e74\u5ea6"
+  },
+  {
+   "fieldname": "grant_announcement_date",
+   "fieldtype": "Date",
+   "label": "\u6388\u6743\u516c\u544a\u65e5"
+  },
+  {
+   "fieldname": "last_annuity_reminder_date",
+   "fieldtype": "Date",
+   "label": "\u6700\u540e\u4e00\u6b21\u5e74\u8d39\u63d0\u9192\u65e5"
+  },
+  {
+   "default": "0",
+   "fieldname": "certificate_received",
+   "fieldtype": "Check",
+   "label": "\u8bc1\u4e66\u662f\u5426\u5230\u6211\u53f8"
+  },
+  {
+   "default": "0",
+   "fieldname": "customer_received_certificate",
+   "fieldtype": "Check",
+   "label": "\u5ba2\u6237\u662f\u5426\u6536\u5230\u8bc1\u4e66"
+  },
+  {
+   "fieldname": "section_foreign_pct",
+   "fieldtype": "Section Break",
+   "label": "\u6d89\u5916/PCT"
+  },
+  {
+   "fieldname": "foreign_case_type",
+   "fieldtype": "Select",
+   "label": "\u6d89\u5916\u6848\u4ef6\u7c7b\u578b",
+   "options": "\u5185\u5bf9\u5916(PCT\u9014\u5f84)\n\u5185\u5bf9\u5916(\u5df4\u9ece\u516c\u7ea6)\n\u5916\u5bf9\u5185(PCT\u9014\u5f84)"
+  },
+  {
+   "fieldname": "national_phase_country",
+   "fieldtype": "Data",
+   "label": "\u56fd\u5bb6\u9636\u6bb5\u56fd\u522b"
+  },
+  {
+   "fieldname": "national_phase_deadline",
+   "fieldtype": "Date",
+   "label": "\u8fdb\u5165\u56fd\u5bb6\u9636\u6bb5\u7edd\u9650\u65e5"
+  },
+  {
+   "fieldname": "foreign_agent_case_no",
+   "fieldtype": "Data",
+   "label": "\u5916\u6240\u6848\u4ef6\u5185\u90e8\u7f16\u53f7"
+  },
+  {
+   "fieldname": "international_application_no",
+   "fieldtype": "Data",
+   "label": "\u56fd\u9645\u7533\u8bf7\u53f7"
+  },
+  {
+   "fieldname": "international_application_date",
+   "fieldtype": "Date",
+   "label": "\u56fd\u9645\u7533\u8bf7\u65e5"
+  },
+  {
+   "fieldname": "section_fee_reduction",
+   "fieldtype": "Section Break",
+   "label": "\u8d39\u51cf\u4e0e\u5b98\u8d39"
+  },
+  {
+   "default": "0",
+   "fieldname": "fee_reduction_applied",
+   "fieldtype": "Check",
+   "label": "\u662f\u5426\u529e\u7406\u8d39\u51cf"
+  },
+  {
+   "fieldname": "fee_reduction_ratio",
+   "fieldtype": "Data",
+   "label": "\u8d39\u51cf\u6bd4\u7387"
+  },
+  {
+   "fieldname": "fee_reduction_record_no",
+   "fieldtype": "Data",
+   "label": "\u8d39\u51cf\u5907\u6848\u53f7"
+  },
+  {
+   "default": "0",
+   "fieldname": "official_fee_paid_by_us",
+   "fieldtype": "Check",
+   "label": "\u662f\u5426\u4ee3\u4ea4\u5b98\u8d39"
+  },
+  {
+   "fieldname": "section_commission",
+   "fieldtype": "Section Break",
+   "label": "\u63d0\u6210(\u9aa8\u67b6)"
+  },
+  {
+   "fieldname": "commission_coefficient",
+   "fieldtype": "Float",
+   "label": "\u4e13\u5229\u63d0\u6210\u7cfb\u6570"
+  },
+  {
+   "fieldname": "drafting_commission_rate",
+   "fieldtype": "Currency",
+   "label": "\u64b0\u5199\u63d0\u6210\u6807\u51c6"
+  },
+  {
+   "fieldname": "oa_commission_rate",
+   "fieldtype": "Currency",
+   "label": "OA\u63d0\u6210\u6807\u51c6"
+  },
+  {
+   "fieldname": "grant_commission_rate",
+   "fieldtype": "Currency",
+   "label": "\u6388\u6743\u63d0\u6210\u6807\u51c6"
+  },
+  {
+   "fieldname": "risk_commission_rate",
+   "fieldtype": "Currency",
+   "label": "\u98ce\u9669\u63d0\u6210\u6807\u51c6"
+  },
+  {
+   "fieldname": "actual_commission",
+   "fieldtype": "Currency",
+   "label": "\u5b9e\u9645\u63d0\u6210"
+  },
+  {
+   "fieldname": "section_divisional",
+   "fieldtype": "Section Break",
+   "label": "\u5206\u6848(\u9884\u7559)"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_divisional",
+   "fieldtype": "Check",
+   "label": "\u662f\u5426\u5206\u6848"
+  },
+  {
+   "fieldname": "parent_case",
+   "fieldtype": "Link",
+   "label": "\u6bcd\u6848",
+   "options": "Patent Case"
+  },
+  {
+   "fieldname": "section_remarks",
+   "fieldtype": "Section Break",
+   "label": "\u5907\u6ce8"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "\u5907\u6ce8"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-04 16:50:27.922855",
+ "modified_by": "Administrator",
+ "module": "ZAP Patent",
+ "name": "Patent Case",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "read": 1,
+   "role": "\u4ee3\u7406\u5e08",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "\u6d41\u7a0b\u5458",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "\u8d22\u52a1"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "impersonate": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "\u7ba1\u7406\u8005",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "impersonate": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

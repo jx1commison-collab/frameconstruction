@@ -1,0 +1,54 @@
+[
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Role",
+  "home_page": null,
+  "is_custom": 0,
+  "modified": "2026-10-04 16:45:20.284770",
+  "name": "代理师",
+  "restrict_to_domain": null,
+  "role_name": "代理师",
+  "two_factor_auth": 0
+ },
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Role",
+  "home_page": null,
+  "is_custom": 0,
+  "modified": "2026-10-04 16:45:20.840683",
+  "name": "流程员",
+  "restrict_to_domain": null,
+  "role_name": "流程员",
+  "two_factor_auth": 0
+ },
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Role",
+  "home_page": null,
+  "is_custom": 0,
+  "modified": "2026-10-04 16:45:20.849566",
+  "name": "财务",
+  "restrict_to_domain": null,
+  "role_name": "财务",
+  "two_factor_auth": 0
+ },
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Role",
+  "home_page": null,
+  "is_custom": 0,
+  "modified": "2026-10-04 16:45:20.857645",
+  "name": "管理者",
+  "restrict_to_domain": null,
+  "role_name": "管理者",
+  "two_factor_auth": 0
+ }
+]
